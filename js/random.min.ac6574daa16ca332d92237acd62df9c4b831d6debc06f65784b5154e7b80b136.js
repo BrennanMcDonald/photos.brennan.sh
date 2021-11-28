@@ -1,0 +1,1 @@
+(()=>{var a=[];window.location=a[Math.floor(Math.random()*a.length)]})()

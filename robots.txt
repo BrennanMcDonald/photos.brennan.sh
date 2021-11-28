@@ -1,0 +1,7 @@
+User-agent: * 
+Disallow: /page/
+Disallow: /post/
+Disallow: /img/
+Disallow: /about/
+Disallow: /archive/
+Disallow: /tags/
