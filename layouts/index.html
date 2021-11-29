@@ -19,12 +19,10 @@
         </div>
         <div class="nine columns right-side">
           <div class="gallery">
-            {{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" "img") }}
-            {{ range $paginator.Pages }}
+            {{ range (where .Site.RegularPages "Type" "in" "img") }}
               {{ partial "img.html" . }}
             {{ end }}
           </div>
-          {{ template "_internal/pagination.html" . }}
         </div>
       </div>
     </div>

@@ -26,14 +26,13 @@ img {
   max-height: 1000px;
   max-width: 100%;
   margin-bottom: 0.3em;
+}
+
+.gallery img {
   opacity: 0.9;
 }
 
-img:hover {
-  opacity: 1;
-}
-
-.nine img {
+.gallery img:hover {
   opacity: 1;
 }
 
@@ -58,7 +57,6 @@ pre {
 footer {
   margin-top: 1em;
 }
-
 
 .title {
   display: block;
@@ -253,7 +251,6 @@ ul.pagination li {
 
   .desktop-tag-list {
     display: block;
-    overflow: scroll;
     max-height: 250px;
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */

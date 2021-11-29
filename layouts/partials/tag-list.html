@@ -1,4 +1,4 @@
-<ul class="desktop-tag-list hidden">
+<ul class="desktop-tag-list">
   {{ range sort site.Taxonomies.tags "value" "desc"}}
     <li><a href="{{ .Page.Permalink }}">{{ .Page.Title | lower }}</a> ({{ .Count }})</li>
   {{ end }}
