@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Uploads an image to the len.to s3 bucket. Depends on exiftool
+# Uploads an image to the photos.brennan.sh s3 bucket. Depends on exiftool
 set -e
 
 if [[ "$#" -ne 2 ]] ; then
@@ -18,7 +18,7 @@ if ! [[ -x "$(command -v exiftool)" ]] ; then
   exit 1
 fi
 
-bucket=ginput
+bucket=photos.brennan.sh
 filepath=$1
 ts=$2
 filename=$(basename "$1")
@@ -27,17 +27,13 @@ extension="${filename##*.}"
 id=$(uuidgen | tr [:upper:] [:lower:] | cut -d'-' -f 1)
 new_filename="${id}.${extension}"
 
-url="https://d17enza3bfujl8.cloudfront.net/${new_filename}"
+url="https://d9wc88udlq1mz.cloudfront.net/${new_filename}"
 
 # Strip all metadata from the image
 exiftool -all= $1
 
 # Upload the image
 aws s3 cp --acl public-read "${filepath}" "s3://${bucket}/${new_filename}"
-
-# Copy the URL to the clipboard
-printf "${url}" | pbcopy
-
 
 echo "Enter location"
 read loc

@@ -29,6 +29,14 @@ img {
   opacity: 0.9;
 }
 
+img:hover {
+  opacity: 1;
+}
+
+.nine img {
+  opacity: 1;
+}
+
 li {
   list-style-type: initial;
   margin-bottom: 0;

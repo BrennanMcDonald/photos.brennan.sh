@@ -8,7 +8,7 @@
     <div class="container about">
       <div class="row">
         <div class="three columns">
-          <a class="title" href="/">len.to</a>
+          <a class="title" href="/">photos.brennan.sh</a>
         </div>
       </div>
 
@@ -24,21 +24,12 @@
           {{ range $images }}{{ $tagged = add $tagged (len .Params.Tags) }}{{ end }}
 
           <ul class="outbound">
-            <li>len.to is a collection of photography by <a href="https://bdw.to">Ben Woodward</a>.</li>
+            <li>This site is a collection of photography by <a href="https://brennan.sh">Brennan McDonald</a>.</li>
             <li>
               There are currently {{ len $images }} <a href="/archive">images</a>
               indexed under {{ $tagged }} <a href="/tags">tags</a>.
             </li>
             <li>The <a href="{{ $mostRecent }}">most recent</a> image was added on {{ .Site.LastChange.Format "Monday, January 2, 2006" }}.</li>
-          </ul>
-
-          <p>Hot keys (JavaScript required)</p>
-          <ul>
-            <li><span class="code">s</span> search images by tag</li>
-            <li><span class="code">esc</span> cancel search</li>
-            <li><span class="code">r</span> random image</li>
-            <li><span class="code">→</span> next page</li>
-            <li><span class="code">←</span> previous page</li>
           </ul>
 
           <ul class="outbound">
