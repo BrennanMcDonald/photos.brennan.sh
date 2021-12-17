@@ -13,4 +13,4 @@ COPY --from=build /build/public /build/public
 COPY --from=build /tmp/htmlfiles.txt /tmp/htmlfiles.txt
 RUN vnu-runtime-image/bin/vnu --verbose --errors-only $(cat /tmp/htmlfiles.txt)
 </code></pre><h2 id=heading-3></h2><h2 id=heading-4></h2><p>With validation now in place for every generated HTML file, I discovered and fixed 8 existing errors.
-Here&rsquo;s <a href=https://github.com/bndw/len.to/commit/e5a5187c22567668587e8dbc7819f58dc7e03b62>the commit</a> implementing HTML validation and the associated bug fixes.</p><h2 id=heading-5></h2></div></div></div><script src=/js/index.min.c7c02a7b31de730cd946d4bfad2f3c5b6c4c546654094e07d66caef0963402bd.js defer></script></body></html>
+Here&rsquo;s <a href=https://github.com/bndw/len.to/commit/e5a5187c22567668587e8dbc7819f58dc7e03b62>the commit</a> implementing HTML validation and the associated bug fixes.</p><h2 id=heading-5></h2></div></div></div><script src=/js/index.min.3b7c4c5b225f8bf2da6526a2c150baa14c455865ff51c949241dbef090474b74.js defer></script></body></html>
