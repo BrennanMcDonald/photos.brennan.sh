@@ -1,0 +1,27 @@
+{
+  "name": "dropbox-s3-sync-lambda",
+  "version": "1.0.0",
+  "description": "AWS Lambda function to sync files from Dropbox to S3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "zip -r function.zip index.js node_modules package.json"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "dropbox",
+    "s3",
+    "sync"
+  ],
+  "author": "Brennan",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.705.0",
+    "dropbox": "^10.34.0",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
