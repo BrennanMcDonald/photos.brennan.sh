@@ -22,7 +22,9 @@ app: {
 
 1. Go to your GitHub repository
 2. Navigate to **Settings** → **Pages**
-3. Under **Source**, select **GitHub Actions**
+3. Under **Source**, select **GitHub Actions** (NOT "Deploy from a branch")
+
+**Important**: If you see an error about "Invalid deployment branch", make sure you selected "GitHub Actions" as the source, not a branch.
 
 ### 3. Push to Main Branch
 
@@ -135,6 +137,30 @@ Before deploying:
 - [ ] Visit your site!
 
 ## 🐛 Troubleshooting
+
+### Error: "Invalid deployment branch"
+
+**Full error**: `Invalid deployment branch and no branch protection rules set in the environment. Deployments are only allowed from gh-pages`
+
+**Cause**: GitHub Pages is configured to deploy from a branch (gh-pages) but the workflow is trying to use GitHub Actions deployment.
+
+**Solution - Option A (Recommended)**: Change to GitHub Actions deployment
+
+1. Go to **Settings** → **Pages**
+2. Under **Build and deployment** → **Source**
+3. Select **"GitHub Actions"** from the dropdown
+4. Save and re-run the failed workflow
+
+**Solution - Option B**: Use the gh-pages branch workflow
+
+1. Delete or disable `.github/workflows/deploy.yml`
+2. Use `.github/workflows/deploy-gh-pages.yml` instead
+3. In **Settings** → **Pages** → **Source**
+4. Select **"Deploy from a branch"**
+5. Choose **gh-pages** branch and **/ (root)**
+6. Push to trigger deployment
+
+See `.github/workflows/README.md` for detailed workflow information.
 
 ### Site shows 404
 

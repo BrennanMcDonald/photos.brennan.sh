@@ -64,13 +64,8 @@ useHead({
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
       <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <h1 class="text-2xl font-light tracking-wide text-gray-900">
-          Brennan
+          Brennan's Photography
         </h1>
-        <div class="flex gap-8 text-sm font-light">
-          <a href="#gallery" class="text-gray-600 hover:text-gray-900 transition-colors">Gallery</a>
-          <a href="#about" class="text-gray-600 hover:text-gray-900 transition-colors">About</a>
-          <a href="#contact" class="text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
-        </div>
       </nav>
     </header>
 
